@@ -78,7 +78,6 @@ module.exports = function (config) {
             'karma-chai',
             'karma-coverage',
             'karma-junit-reporter',
-            'karma-ng-html2js-preprocessor',
             'karma-coverage',
             'karma-mocha-reporter',
             'karma-htmlfile-reporter'
