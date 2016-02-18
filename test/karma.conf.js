@@ -10,7 +10,7 @@ module.exports = function (config) {
         basePath: '../',
 
         // increase timeout
-        browserNoActivityTimeout: 100000,
+        //browserNoActivityTimeout: 100000,
 
         // testing framework to use (jasmine/mocha/qunit/...)
         frameworks: ['mocha', 'chai'],
@@ -34,7 +34,6 @@ module.exports = function (config) {
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
             'app/**/*.js': ['coverage']
-            //'app/**/*.html': ['ng-html2js']
         },
 
         reporters: ['mocha', 'html', 'coverage', 'junit'],
@@ -67,15 +66,14 @@ module.exports = function (config) {
         // - PhantomJS
         // - IE (only Windows)
         browsers: [
-            //'PhantomJS'
-            'Chrome'
+            'PhantomJS'
+            //'Chrome'
         ],
 
         // Which plugins to enable
         plugins: [
-            //'karma-phantomjs-launcher',
-            'karma-chrome-launcher',
-            //'karma-browserify',
+            'karma-phantomjs-launcher',
+            //'karma-chrome-launcher',
             'karma-mocha',
             'karma-chai',
             'karma-coverage',
@@ -86,35 +84,14 @@ module.exports = function (config) {
             'karma-htmlfile-reporter'
         ],
 
-        //ngHtml2JsPreprocessor: {
-        //    //stripPrefix: '.*/spa-reference-app/app/',
-        //    //stripPrefix: '.*/er-ui-app/src/main/',
-        //
-        //    // define a custom transform function
-        //    /*
-        //    cacheIdFromPath: function (filepath) {
-        //        var templateUrl = filepath.substr(5);
-        //        console.log('ngHtml2JsPreprocessor: filepath=' + filepath + ' templateUrl=' + templateUrl);
-        //        return templateUrl;
-        //    },
-        //    */
-        //    cacheIdFromPath: function (filepath) {
-        //        var templateUrl = filepath.replace(/main\/modules\/.+\//, 'views/');
-        //        console.log('ngHtml2JsPreprocessor: filepath=' + filepath + ' templateUrl=' + templateUrl);
-        //        return templateUrl;
-        //    },
-        //    moduleName: 'er-ui-app.templates'
-        //},
-
         // Continuous Integration mode
         // if true, it capture browsers, run tests and exit
-        singleRun: false,
+        singleRun: true,
 
         colors: true,
 
         // level of logging
         // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
         logLevel: config.LOG_INFO
-        //logLevel: config.LOG_DEBUG
     });
 };
