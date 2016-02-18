@@ -10,7 +10,7 @@ describe('Resources', function () {
             expect(SomeResource).to.exist;
         }));
 
-        it('should have ability to query', inject(function (SomeResource) {
+        it('should have a query function', inject(function (SomeResource) {
             expect(SomeResource.query).to.exist;
         }));
     });

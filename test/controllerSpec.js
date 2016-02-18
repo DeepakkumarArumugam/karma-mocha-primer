@@ -14,12 +14,12 @@ describe('Controllers', function () {
             $httpBackend = _$httpBackend_;
             $httpBackend.expectGET('api/someData.json').respond([
                 {
-                    "id": 1,
-                    "someValue": 77
+                    'id': 1,
+                    'someValue': 77
                 },
                 {
-                    "id": 2,
-                    "someValue": 88
+                    'id': 2,
+                    'someValue': 88
                 }
             ]);
 
@@ -40,5 +40,5 @@ describe('Controllers', function () {
             $httpBackend.flush();
             expect(scope.someProperty.length).to.equal(2);
         });
-    })
+    });
 });

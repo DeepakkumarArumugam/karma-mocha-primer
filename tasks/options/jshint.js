@@ -1,5 +1,7 @@
 // Make sure code styles are up to par and there are no obvious mistakes
 
+var _ = require('underscore');
+
 module.exports = {
 
     options: {
@@ -33,10 +35,5 @@ module.exports = {
     all: [
         'Gruntfile.js',
         'app/**/*.js'
-    ],
-    test: {
-        options: {
-            jshintrc: 'test/.jshintrc'
-        }
-    }
+    ]
 };
