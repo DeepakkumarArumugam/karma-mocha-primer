@@ -2,7 +2,6 @@
 
 describe('Controllers', function () {
 
-    beforeEach(module('test-primer'));
     beforeEach(module('test-primer.controller'));
 
     describe('SomeCtrl', function () {
